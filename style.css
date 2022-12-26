@@ -1,0 +1,25 @@
+#meme-image-container {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border: 1px dashed black;
+}
+
+
+.meme  {
+  border: 1px dashed black;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#meme-text {
+  text-align: center;
+  justify-items: last baseline;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: blue;
+  margin: 0;
+}
