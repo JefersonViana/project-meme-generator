@@ -37,6 +37,7 @@ inputImage.addEventListener('change', (event) => {
       img.src = readerTarget.result;
       img.className = 'meme';
       containerImage.innerHTML = '';
+      // container.appendChild(paragraph);
       containerImage.appendChild(img);
     });
     reader.readAsDataURL(file);
