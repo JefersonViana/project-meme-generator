@@ -6,6 +6,7 @@ containerImage.id = 'meme-image';
 const input = document.createElement('input');
 input.id = 'text-input';
 input.type = 'text';
+input.maxLength = 60;
 const inputImage = document.createElement('input');
 inputImage.id = 'meme-insert';
 inputImage.type = 'file';
