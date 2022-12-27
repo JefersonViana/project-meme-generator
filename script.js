@@ -59,8 +59,8 @@ inputImage.addEventListener('change', (event) => {
   if (file) {
     const reader = new FileReader();
     console.log(reader);
-    reader.addEventListener('load', (event) => {
-      const readerTarget = event.target;
+    reader.addEventListener('load', (evento) => {
+      const readerTarget = evento.target;
       containerImage.src = readerTarget.result;
       containerImage.innerHTML = '';
     });

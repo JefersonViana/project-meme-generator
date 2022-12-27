@@ -4,7 +4,7 @@ body {
 
 header {
   text-align: center;
-  background-color: rgb(252, 197, 96);
+  background-color: rgb(252 , 197 , 96);
   top: 0;
   padding: 10px;
 }
@@ -20,7 +20,7 @@ header {
   width: 300px;
   position: relative;
   border: 1px solid black;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 #text-input {
