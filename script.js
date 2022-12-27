@@ -1,7 +1,7 @@
 const body = document.querySelector('body');
 const container = document.createElement('div');
 container.id = 'meme-image-container';
-const containerImage = document.createElement('div');
+const containerImage = document.createElement('img');
 containerImage.id = 'meme-image';
 const input = document.createElement('input');
 input.id = 'text-input';
@@ -49,7 +49,7 @@ const texto = () => {
   paragraph.innerText = input.value;
 };
 
-input.addEventListener('keyup', texto)
+input.addEventListener('keyup', texto);
 
 inputImage.addEventListener('change', (event) => {
   const inputTarget = event.target;
@@ -61,11 +61,8 @@ inputImage.addEventListener('change', (event) => {
     console.log(reader);
     reader.addEventListener('load', (event) => {
       const readerTarget = event.target;
-      const img = document.createElement("img");
-      img.src = readerTarget.result;
-      img.className = 'meme';
+      containerImage.src = readerTarget.result;
       containerImage.innerHTML = '';
-      containerImage.appendChild(img);
     });
     reader.readAsDataURL(file);
   }
@@ -113,13 +110,13 @@ const funcao = (event) => {
   const alvo = event.target;
   containerImage.innerHTML = '';
   if (alvo === image1) {
-    containerImage.appendChild(image1);
+    containerImage.src = 'imgs/meme1.png';
   } else if (alvo === image2) {
-    containerImage.appendChild(image2);
+    containerImage.src = 'imgs/meme2.png';
   } else if (alvo === image3) {
-    containerImage.appendChild(image3);
+    containerImage.src = 'imgs/meme3.png';
   } else {
-    containerImage.appendChild(image4);
+    containerImage.src = 'imgs/meme4.png';
   }
 };
 
@@ -127,5 +124,3 @@ meme1.addEventListener('click', funcao);
 meme2.addEventListener('click', funcao);
 meme3.addEventListener('click', funcao);
 meme4.addEventListener('click', funcao);
-
-// precisa arrumar requisito 7
